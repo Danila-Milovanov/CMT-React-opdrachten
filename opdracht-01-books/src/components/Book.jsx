@@ -1,11 +1,24 @@
-function Book ({ title, author, image }) {
-    return (
-        <div className="Book">
-            <img src={image} alt={title}/>
-            <h3>{title}</h3>
-            <p3>{author}</p3>
-        </div>
-    );
-}
+import React, {useState} from "react";
 
-export default Book;
+export default function Book({ title, author }) {
+    const [aantalKeerGelezen, setAantalKeerGelezen] = useState(0);
+
+    function verhoogTeller() {
+        setAantalKeerGelezen(prev => prev + 1);
+    }
+
+
+    return (
+        <article>
+            <h2>{title}</h2>
+            <h3>{author}</h3>
+
+
+            <div>
+                <button type="button" onClick={verhoogTeller}>
+                    Keer gelezen: {aantalKeerGelezen}
+                </button>
+            </div>
+        </article>
+    );
+};
