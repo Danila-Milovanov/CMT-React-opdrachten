@@ -1,18 +1,26 @@
-import Book from "./Book";
+import React, { useState } from "react";
+
+function BookList () {
+    const [books, setBooks] = useState([
+        { id: 1, title: "Harry Potter And The Sorcerers Stone", author: "Joanne Rowling"},
+        { id: 2, title: "Fantasia VI", author: "Geronimo Stilton"},
+        { id: 3, title: "The Hunger Games", author: "Suzanne Collins"},
+    ]);
 
 
-function BookList(){
-    return(
-        <div className="book-list">
-            <h2>Amazon Best Books</h2>
-            <div className="books">
-                <Book title="Harry Potter And The Sorcerers Stone" author="Joanne Rowling" image="./images/book-1.png" />
-                <Book title="Fantasia VI" author="Geronimo Stilton" image="./images/book-2.png" />
-                <Book title="The Hunger Games" author="Suzanne Collins" image="./images/book-3.png" />
-            </div>
+
+    return (
+        <div>
+            <h1>Boekenlijst</h1>
+            <ul>
+                {books.map((book) => (
+                    <li>
+                        <strong>{book.title}</strong> - {book.author}
+                    </li>
+            ))}
+            </ul>
         </div>
     );
-}
-
+};
 
 export default BookList;
