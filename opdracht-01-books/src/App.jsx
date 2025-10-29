@@ -1,7 +1,7 @@
 import './App.css';
-import Header from './Header';
-import Layout from './Layout';
-import BookList from './BookList';
+import Header from './components/Header';
+import Layout from './components/Layout';
+import BookList from './components/BookList';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <h1>Opdracht 1 - Books</h1>
       <Layout>
-        <BookList></BookList>
+        <BookList/>
       </Layout>
     </>
   );
