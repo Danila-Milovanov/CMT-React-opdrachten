@@ -1,12 +1,17 @@
-import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/HomePage.jsx';
+import DetailPage from './pages/DetailPage';
+import './App.css';
 
 function App() {
-
   return (
-    <>
-      <h1>Opdracht 6 - Zoo app</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products/:productId" element={<ProductDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
