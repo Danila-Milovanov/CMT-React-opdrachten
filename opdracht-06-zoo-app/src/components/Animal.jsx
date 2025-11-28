@@ -2,11 +2,13 @@ const Animal = ({ animal, onShowDetail}) => {
     return (
         <section>
             <h2>{animal.name}</h2>
-            <p>{animal.imageUrl}</p>
+            <img src={animal.imageUrl} alt="" />
             <p>{animal.description}</p>
-            <button onClick={() => onShowDetail(product.id)}>
+            <button onClick={() => onShowDetail(animal.id)}>
                 Meer info
             </button>
         </section>
     );
 };
+
+export default Animal;

@@ -6,7 +6,20 @@ import animals from '../animals';
 const Home = () => {
   const navigate = useNavigate();
   const [animalList, setAnimalList] = useState(animals);
+  console.log(animals)
 
   const goToDetail = (animalId) => {
-    navigate(`/products/${animalId}`);
+    navigate(`/animals/${animalId}`);
+  }
+
+    return(
+     <section>
+      {animals.map((animal) => (
+        <Animal animal={animal} onShowDetail={goToDetail} />
+      ))}
+     </section>
+      
+    );
   };
+
+  export default Home;

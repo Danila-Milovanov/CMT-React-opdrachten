@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/HomePage.jsx';
-import DetailPage from './pages/DetailPage';
+import AnimalDetail from './pages/DetailPage.jsx';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products/:productId" element={<ProductDetail />} />
+        <Route path="/animals/:animalId" element={<AnimalDetail />} />
       </Routes>
     </BrowserRouter>
   );
