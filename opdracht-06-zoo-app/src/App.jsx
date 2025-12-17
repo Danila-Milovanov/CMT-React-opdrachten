@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/HomePage.jsx';
 import AnimalDetail from './pages/DetailPage.jsx';
 import './App.css';
+import animals from './animals.js';
 
 function App() {
   return (

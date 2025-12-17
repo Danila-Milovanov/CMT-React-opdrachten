@@ -6,20 +6,31 @@ import animals from '../animals';
 const Home = () => {
   const navigate = useNavigate();
   const [animalList, setAnimalList] = useState(animals);
-  console.log(animals)
+  const [searchTerm, setSearchTerm] = useState('');
 
   const goToDetail = (animalId) => {
     navigate(`/animals/${animalId}`);
   }
 
-    return(
-     <section>
-      {animals.map((animal) => (
-        <Animal animal={animal} onShowDetail={goToDetail} />
-      ))}
-     </section>
-      
-    );
-  };
+  const filteredAnimals = animalList.filter(animal =>
+    animal.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-  export default Home;
+  return (
+    <section>
+      <input
+        type="text"
+        placeholder="Search for an animal"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        style={{ marginBottom: '1rem', padding: '0.5rem', width: '100%' }}
+      />
+
+      {filteredAnimals.map((animal) => (
+        <Animal key={animal.id} animal={animal} onShowDetail={goToDetail} />
+      ))}
+    </section>
+  );
+};
+
+export default Home;
