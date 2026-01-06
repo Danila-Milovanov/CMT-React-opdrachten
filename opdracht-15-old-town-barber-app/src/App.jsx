@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>Opdracht 13 - Flashcard Quiz</h1>
+      <h1>Opdracht 15 - Old Town Barber App</h1>
     </>
   );
 }
