@@ -22,7 +22,7 @@ export default function UserProfile ({ initialProfile, onSave}) {
             <input placeholder='Naam' value={form.name} onChange={e => setForm ({...form, name: e.target.value})}/>
             <input placeholder='Email' type="email" value={form.email} onChange={e => setForm ({...form, email: e.target.value})}/>
             <input placeholder='Telefoon' value={form.phone} onChange={e => setForm ({...form, phone: e.target.value})}/>
-            <button>Opslaan</button>
+            <button type='submit'>Opslaan</button>
             </form>
     );
 }
