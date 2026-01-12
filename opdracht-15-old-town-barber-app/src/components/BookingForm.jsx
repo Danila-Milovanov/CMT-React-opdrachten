@@ -21,7 +21,7 @@ export default function BookingForm({ user }) {
       return;
     }
 
-    // 🔒 Date validation (never trust the UI)
+    // 🔒 Date validatie (Ik heb dit gemaakt met AI)
     const selectedDate = new Date(date);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -31,7 +31,7 @@ export default function BookingForm({ user }) {
       return;
     }
 
-    // 🕒 Combine date + time into ONE datetime
+    // 🕒 Combnatie met date tijd (Ik heb dat ook gegoogled)
     const appointmentDateTime = new Date(`${date}T${time}`);
 
     if (appointmentDateTime < new Date()) {

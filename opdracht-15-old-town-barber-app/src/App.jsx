@@ -1,4 +1,8 @@
 import './App.css';
+import UserProfile from './components/UserProfile';
+import { useState, useEffect } from 'react';
+import { getUserProfile, setUserProfile } from './utils/localStorage';
+import { toast } from 'react-hot-toast';
 
 function App() {
 

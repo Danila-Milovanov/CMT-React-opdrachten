@@ -12,7 +12,7 @@ export const getUserProfile = () => {
         } catch {}
     };
 
-    export const getAppointments = (appointments) => {
+    export const getAppointments = () => {
         try {
             return JSON.parse(localStorage.getItem('appointments')) || [];
         } catch {}

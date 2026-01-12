@@ -117,7 +117,6 @@ const shopData = {
   ]
 };
 ```
-
 ## 🧩 Wat ga je bouwen?
 
 ### **1. UserProfile Component**
